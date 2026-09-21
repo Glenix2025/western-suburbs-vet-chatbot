@@ -856,6 +856,10 @@
   function openCard() {
     cardOpen = true;
     els.wsvc_card.classList.add("wsvc-open");
+    // Opening the menu hides the teaser bubble for good (per Glenda's request) —
+    // it's done its job of drawing the visitor in.
+    teaserDismissed = true;
+    els.wsvc_teaser.classList.remove("wsvc-show");
     positionTeaser();
   }
   function closeCard() {
